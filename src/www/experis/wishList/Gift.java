@@ -17,4 +17,13 @@ public class Gift {
     public void setName(String name) {
         this.name = name;
     }
+
+    // Override
+
+    @Override
+    public String toString() {
+        return "Gift{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
