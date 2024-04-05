@@ -12,9 +12,12 @@ public class CharCounter {
         HashMap<Character, Integer> charCounterList = new HashMap<>();
 
         for (int i = 0; i < inputString.length(); i++) {
-            System.out.println(inputString.charAt(i));
+            char c = inputString.charAt(i);
+            charCounterList.put(c, charCounterList.getOrDefault(c, 0) + 1);
+        }
+        for (char c : charCounterList.keySet()){
+            System.out.println(c + "= " +charCounterList.get(c));
         }
 
-        System.out.println(charCounterList);
     }
 }
