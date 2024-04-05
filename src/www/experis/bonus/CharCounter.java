@@ -8,13 +8,13 @@ public class CharCounter {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Inserisci la parola");
         String inputString = scanner.nextLine();
-        char[] inputToCharArray = inputString.toCharArray();
 
-        HashMap<Character, Integer> charCounter = new HashMap<>();
+        HashMap<Character, Integer> charCounterList = new HashMap<>();
 
-        for (int i = 0, j = inputString.length() - 1; i < inputString.length(); i++ ,j--) {
-            System.out.println("i = " + inputToCharArray[i]);
-            System.out.println("j = " + inputToCharArray[j]);
+        for (int i = 0; i < inputString.length(); i++) {
+            System.out.println(inputString.charAt(i));
         }
+
+        System.out.println(charCounterList);
     }
 }
