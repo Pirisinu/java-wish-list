@@ -1,5 +1,6 @@
 package www.experis.wishList;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
@@ -10,6 +11,14 @@ public class Main {
         boolean exit = false;
         List<Gift> wishList = new ArrayList<Gift>();
         Scanner scan = new Scanner(System.in);
+
+        try(Scanner scanner = new Scanner(new File("resources/wishList.txt"))) {
+            while (scanner.hasNextLine()){
+                wishList.add(new Gift(scanner.nextLine()));
+            }
+        }
+        System.out.print("You're wish list:");
+        System.out.println(wishList);
 
         do {
             System.out.println("Do you want to include a gift? Y/N:");
