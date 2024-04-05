@@ -1,6 +1,6 @@
 package www.experis.wishList;
 
-public class Gift {
+public class Gift  implements Comparable<Gift> {
     // Attributes
     private String name;
     // Constructor
@@ -25,5 +25,10 @@ public class Gift {
         return "Gift{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Gift o) {
+        return 0;
     }
 }
