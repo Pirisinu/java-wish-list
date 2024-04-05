@@ -52,7 +52,11 @@ public class Main {
         // Write on file
 
         try(FileWriter writer = new FileWriter("resources/wishList.txt")){
-
+            for (Gift g : wishList){
+                if (g != null){
+                    writer.write(g.toString()+"\n");
+                }
+            }
         } catch (IOException e){
             System.out.println("An error occurred while writing to the file.");
         }
