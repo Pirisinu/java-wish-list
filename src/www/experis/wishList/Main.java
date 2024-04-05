@@ -2,9 +2,7 @@ package www.experis.wishList;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -43,7 +41,8 @@ public class Main {
         System.out.print("Wish list tostring(): ");
         System.out.println(wishList);
         System.out.println("-----------------------");
-        System.out.println("Wish list enhanced for:");
+        System.out.println("Sorted wish list with enhanced for:");
+        Collections.sort(wishList);
         for (Gift g : wishList){
             System.out.println(g);
         }
