@@ -1,11 +1,13 @@
 package www.experis.wishList;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("Welcome to you're wish list.");
         boolean exit = false;
         List<Gift> wishList = new ArrayList<Gift>();
@@ -32,6 +34,8 @@ public class Main {
             }
 
         } while (!exit);
+        scan.close();
+
         System.out.println("-----------------------");
         System.out.print("Final length wish list: ");
         System.out.println(wishList.size());
@@ -44,5 +48,14 @@ public class Main {
             System.out.println(g);
         }
         System.out.println("-----------------------");
+
+        // Write on file
+
+        try(FileWriter writer = new FileWriter("resources/wishList.txt")){
+
+        } catch (IOException e){
+            System.out.println("An error occurred while writing to the file.");
+        }
     }
+
 }
