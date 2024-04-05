@@ -32,7 +32,17 @@ public class Main {
             }
 
         } while (!exit);
+        System.out.println("-----------------------");
         System.out.print("Final length wish list: ");
         System.out.println(wishList.size());
+        System.out.println("-----------------------");
+        System.out.print("Wish list tostring(): ");
+        System.out.println(wishList);
+        System.out.println("-----------------------");
+        System.out.println("Wish list enhanced for:");
+        for (Gift g : wishList){
+            System.out.println(g);
+        }
+        System.out.println("-----------------------");
     }
 }
