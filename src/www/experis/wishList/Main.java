@@ -14,21 +14,25 @@ public class Main {
         do {
             System.out.println("Do you want to include a gift? Y/N:");
             String choice = scan.nextLine();
-            switch (choice){
-                case "y":
-
+            switch (choice.toUpperCase()){
+                case "Y":
+                    System.out.print("Insert gift name: ");
+                    String giftName = scan.nextLine();
+                    Gift gift = new Gift(giftName);
+                    wishList.add(gift);
+                    System.out.print("Length of wish list: ");
+                    System.out.println(wishList.size());
                     break;
                 case "N":
-                    exit = true
+                    exit = true;
                     break;
                 default:
                     System.out.println("Choise not valid.");
                     break;
             }
 
-            System.out.println(wishList.size());
-            exit = true;
-
         } while (!exit);
+        System.out.print("Final length wish list: ");
+        System.out.println(wishList.size());
     }
 }
