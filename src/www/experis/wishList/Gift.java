@@ -29,6 +29,6 @@ public class Gift  implements Comparable<Gift> {
 
     @Override
     public int compareTo(Gift o) {
-        return 0;
+        return getName().compareTo(o.getName());
     }
 }
